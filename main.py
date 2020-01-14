@@ -3,9 +3,7 @@ from pydantic import BaseModel
 import requests
 import json
 
-
 app = FastAPI()
-
 
 @app.get("/")
 def read_root():
@@ -126,4 +124,6 @@ async def create_item(item: auth):
     
 
 #DASHBOARD
+
+
 
