@@ -11,7 +11,7 @@ app = FastAPI()
 def read_root():
     return {"Hello": "Mock CrudTec"}
 
-# AUTH
+#AUTH
 class auth(BaseModel):
     user: str
     password: str
