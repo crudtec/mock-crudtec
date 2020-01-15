@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/root.json)
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/root.json")
     return json.loads(response.content)
 
 #AUTH
@@ -18,7 +18,7 @@ class auth(BaseModel):
 @app.post("/auth", status_code=200)
 async def create_item(item: auth):
     if item.user == "admin@crudtec.com.br":
-        response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/auth-admin.json)
+        response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/auth-admin.json")
         return json.loads(response.content)
     elif item.user == "staff@crudtec.com.br":
         response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/auth-staff.json")
