@@ -1,0 +1,49 @@
+{
+    "access_token": "exemplo-yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk0NjM5NDUsImlzcyI6IkNydWRUZWMiLCJhdWQiOiJDbGllbnRzIn0.wzjfA8OAk06SGAEUyiDiRokyu54BrJqFsg-XzSI-8GU",
+    
+    
+    "user": {
+        "uuid"    : "XgbuVEXBU6gtSKdbTYR1Zbbby1i3",
+        "from"    : "custom-db",
+        "password": "staff",
+        "role"    : "staff",
+        "data"    : {
+            "displayName": "Wlad Staff",
+            "photoURL"   : "https://img.icons8.com/plasticine/2x/user.png",
+            "email"      : "staff",
+            "settings"     : {
+                "layout"          : {
+                    "style" : "layout2",
+                    "config": {
+                        "mode"   : "boxed",
+                        "scroll" : "content",
+                        "navbar" : {
+                            "display": true
+                        },
+                        "toolbar": {
+                            "display" : true,
+                            "position": "below"
+                        },
+                        "footer" : {
+                            "display": true,
+                            "style"  : "fixed"
+                        }
+                    }
+                },
+                "customScrollbars": true,
+                "theme"          : {
+                    "main"   : "greeny",
+                    "navbar" : "mainThemeDark",
+                    "toolbar": "mainThemeDark",
+                    "footer" : "mainThemeDark"
+                }
+            },
+            "shortcuts"    : [
+                "calendar",
+                "mail",
+                "contacts",
+                "todo"
+            ]
+        }
+    }
+}
