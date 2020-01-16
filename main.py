@@ -8,7 +8,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",
-    "https://m-flow.herokuapp.com/"
+    "https://mflow-crudtec.herokuapp.com/",
 ]
 
 app.add_middleware(
