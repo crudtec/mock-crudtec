@@ -1,9 +1,23 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from starlette.middleware.cors import CORSMiddleware
 import requests
 import json
 
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000",
+    "https://m-flow.herokuapp.com/"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def read_root():
