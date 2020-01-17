@@ -1,0 +1,17 @@
+{
+    "_id": "5de5c78e7083e2001d8219a4",
+    "ticketNumber": "119",
+    "userName": "AlexsandroRC",
+    "channel": "telegram",
+    "sessionInformation": {
+      "toId": "BartPonto_bot",
+      "toName": "BartPonto",
+      "fromId": "798511215",
+      "fromName": "AlexsandroRC",
+      "serviceUrl": "https://telegram.botframework.com/",
+      "channelId": "telegram",
+      "conversationId": "798511215"
+    },
+    "created": "2019-12-03T02:25:18.035Z",
+    "finished": "0001-01-01T00:00:00.000Z"
+  }

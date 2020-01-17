@@ -8,7 +8,7 @@
         "password": "staff",
         "role"    : "staff",
         "data"    : {
-            "displayName": "Wlad Staff",
+            "displayName": "Wlad Agent",
             "photoURL"   : "https://img.icons8.com/plasticine/2x/user.png",
             "email"      : "staff",
             "settings"     : {

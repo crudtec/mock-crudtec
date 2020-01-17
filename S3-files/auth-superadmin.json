@@ -1,50 +1,49 @@
 {
     "access_token": "exemplo-yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk0NjM5NDUsImlzcyI6IkNydWRUZWMiLCJhdWQiOiJDbGllbnRzIn0.wzjfA8OAk06SGAEUyiDiRokyu54BrJqFsg-XzSI-8GU",
-    
-    
     "user": {
-        "uuid"    : "XgbuVEXBU6gtSKdbTYR1Zbbby1i3",
-        "from"    : "custom-db",
-        "password": "staff",
-        "role"    : "staff",
+        "uuid"    : "XgbuVEXBU5gtSKdbQRP1Zbbby1i1",
+        "from"    : "db-users",
+        "password": "admin",
+        "role"    : "admin",
         "data"    : {
-            "displayName": "Wlad Staff",
-            "photoURL"   : "https://img.icons8.com/plasticine/2x/user.png",
-            "email"      : "staff",
+            "displayName": "Wlad Super Adm",
+            "photoURL"   : "https://i.pinimg.com/originals/d1/1a/45/d11a452f5ce6ab534e083cdc11e8035e.png",
+            "email"      : "admin",
             "settings"     : {
                 "layout"          : {
                     "style" : "layout1",
                     "config": {
-                        "mode"   : "fullwidth",
                         "scroll" : "content",
                         "navbar" : {
-                            "display": true,
+                            "display" : true,
                             "folded"  : true,
                             "position": "left"
                         },
                         "toolbar": {
                             "display" : true,
+                            "style"   : "fixed",
                             "position": "below"
                         },
                         "footer" : {
-                            "display": false,
-                            "style"  : "fixed"
-                        }
+                            "display" : false,
+                            "style"   : "fixed",
+                            "position": "below"
+                        },
+                        "mode"   : "fullwidth"
                     }
                 },
                 "customScrollbars": true,
-                "theme"          : {
-                    "main"   : "greeny",
-                    "navbar" : "greeny",
-                    "toolbar": "greeny",
-                    "footer" : "greeny"
+                "theme"           : {
+                    "main"   : "defaultDark",
+                    "navbar" : "defaultDark",
+                    "toolbar": "defaultDark",
+                    "footer" : "defaultDark"
                 }
             },
             "shortcuts"    : [
                 "calendar",
                 "mail",
-                "contacts",
-                "todo"
+                "contacts"
             ]
         }
     }
