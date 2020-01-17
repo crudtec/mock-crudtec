@@ -64,6 +64,15 @@ class ticket(BaseModel):
     created:str
     finished:str
 
+#GET TICKETS
+@app.get("/tickets", status_code=200, tags=["Tickets"],
+summary="Resgata tickets",
+description="Responsavel por resgatar os tickets de um cliente da aplicacao")
+def get_prj():
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    return json.loads(response.content)
+
+#POST TICKET
 @app.post("/tickets", status_code=201, tags=["Tickets"],
 summary="Insere um novo ticket",
 description="Responsavel por criar novos tickets.")
@@ -71,6 +80,7 @@ async def post_ticket(ticket: ticket):
     response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/ticket-post.json")
     return json.loads(response.content)
 
+#PUT TICKET
 @app.put("/tickets/{ticketNumber}", status_code=204, tags=["Tickets"],
 summary="Atualiza um ticket",
 description="Responsavel por atuliazr os tickets.")
@@ -85,6 +95,15 @@ class conversation(BaseModel):
     ticketNumber:str
     dateTime:str
 
+#GET CONVERSATIONS
+@app.get("/conversations/{ticketNumber}", status_code=200, tags=["Conversations"],
+summary="Resgata um vetor de toda conversa",
+description="Responsavel por resgatar a lista de uma conversa ate o momento.")
+async def get_conversation(conversation: conversation):
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    return json.loads(response.content)
+
+#POST CONVERSATION
 @app.post("/conversations", status_code=201,  tags=["Conversations"],
 summary="Insere uma nova frase da conversa em um ticket",
 description="Responsavel por criar nova conversa relacionada a um ticket aberto.")
@@ -92,12 +111,7 @@ async def post_conversation(conversation: conversation):
     response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/conversation.json")
     return json.loads(response.content)
 
-@app.get("/conversations/{ticketNumber}", status_code=200, tags=["Conversations"],
-summary="Resgata um vetor de toda conversa",
-description="Responsavel por resgatar a lista de uma conversa ate o momento.")
-async def get_conversation(conversation: conversation):
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
-    return json.loads(response.content)
+
 
 #GET PARAMETERS
 @app.get("/parameters", status_code=200, tags=["Parameters"],
@@ -195,7 +209,6 @@ description="Responsavel por excluir o cliente da aplicacao. **Devera apenas des
 def del_clt():
     response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
     return json.loads(response.content)
-
 
 #GET PROJECTS
 @app.get("/projects", status_code=200, tags=["Projects"],
