@@ -215,7 +215,7 @@ def del_clt():
 summary="Resgata projetos",
 description="Responsavel por resgatar os projetos de um cliente da aplicacao")
 def get_prj():
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-list.json")
     return json.loads(response.content)
 
 #POST PROJECT
@@ -223,7 +223,7 @@ def get_prj():
 summary="Insere projeto",
 description="Responsavel por criar projeto da aplicacao")
 def post_prj():
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-item.json")
     return json.loads(response.content)
 
 #PUT PROJECT
@@ -231,7 +231,7 @@ def post_prj():
 summary="Atualiza projeto",
 description="Responsavel por atualizar o projeto da aplicacao")
 def put_prj():
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-item.json")
     return json.loads(response.content)
 
 #DELETE PROJECT
@@ -239,7 +239,7 @@ def put_prj():
 summary="Exclui projeto",
 description="Responsavel por excluir o projetoda aplicacao. **Devera apenas desativar o registro**")
 def del_prj():
-    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/construction.json")
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-item.json")
     return json.loads(response.content)
 
 
