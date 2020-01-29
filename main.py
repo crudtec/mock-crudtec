@@ -218,6 +218,14 @@ def get_prj():
     response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-list.json")
     return json.loads(response.content)
 
+#GET PROJECT
+@app.get("/projects/{projectId}", status_code=200, tags=["Projects"],
+summary="Resgata um projeto",
+description="Responsavel por resgatar um projeto de um cliente da aplicacao")
+def get_prj_item():
+    response = requests.get("https://s3.amazonaws.com/crudtec.com.br/mock-mflow/projects-item.json")
+    return json.loads(response.content)
+
 #POST PROJECT
 @app.post("/projects", status_code=200, tags=["Projects"],
 summary="Insere projeto",
